@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { SEO } from '../components/SEO'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -36,6 +37,7 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="About" type="naps" location="/About" />
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

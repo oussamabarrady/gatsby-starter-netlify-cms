@@ -5,6 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
+import { SEO } from '../components/SEO'
 
 export const IndexPageTemplate = ({
   image,
@@ -131,6 +132,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="le paiement réinventé pour tous" type="naps" description={frontmatter.description} location="/" />
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
